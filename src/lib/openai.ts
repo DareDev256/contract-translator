@@ -11,10 +11,12 @@ import type {
   KeyTerm,
 } from "./types";
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+function getClient() {
+  return new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+}
 
 async function callGPT(prompt: string): Promise<string> {
-  const response = await openai.chat.completions.create({
+  const response = await getClient().chat.completions.create({
     model: "gpt-4-turbo-preview",
     messages: [{ role: "user", content: prompt }],
     temperature: 0.2,
