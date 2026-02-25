@@ -121,6 +121,10 @@ src/
     └── parsers.ts              # PDF/DOCX/TXT file parsing
 ```
 
+## Documentation
+
+- **[API Billing Guide](docs/api-billing-guide.md)** — Managing AI API costs for team deployments, per-seat invoice behavior across providers, and cost estimation per analysis
+
 ## License
 
 MIT
